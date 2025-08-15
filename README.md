@@ -30,6 +30,15 @@ multi-precision-quantization/
 ├── UL-VIO/     # Visual–Inertial Odometry quantization — BF16+INT8, FP4, FP8, Mixed Precision (Posit8+FP4), Posit4/8/16
 │
 └── README.md   # Generic README
+```
+---
 
+## ⚙️ Installation
 
-
+Clone the repository:
+```bash
+git clone https://github.com/XXXXXXXXXXXXXXXX/XR-NPE.git
+cd XR-NPE
+pip install -r requirements.txt
+pip install -r requirements_extra.txt  #for some additional library might be used
+```
