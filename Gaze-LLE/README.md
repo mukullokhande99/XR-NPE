@@ -21,6 +21,10 @@ You can either run the given code cells that do this automatically or manually e
 ```bash
 git clone https://github.com/fkryan/gazelle.git
 ```
+<p float="left">
+  <img src="image/fp32.jpg" width="45%" />
+  <img src="image/fp4.jpg" width="45%" />
+</p>
 
 ## Perform Model Analysis
 The notebooks include utility functions to:
