@@ -29,7 +29,7 @@ XR-NPE/
 │
 ├── Resnet/     # ResNet image classification quantization — BF16, FP4, FP8, Posit8
 │
-├── Imagenet/     # ResNet image classification quantization — BF16, FP4, FP8, Posit8
+├── Efficientnet/     # ResNet image classification quantization — BF16, FP4, FP8, Posit8
 │
 ├── UL-VIO/     # Visual–Inertial Odometry quantization — BF16+INT8, FP4, FP8, Mixed Precision (Posit8+FP4), Posit4/8/16
 │
