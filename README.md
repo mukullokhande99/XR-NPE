@@ -42,3 +42,7 @@ cd XR-NPE
 pip install -r requirements.txt
 pip install -r requirements_extra.txt  #for some additional library might be used
 ```
+🔗 References
+- [Gaze-LLE](https://github.com/fkryan/gazelle)
+- [ResNet](https://github.com/JayPatwardhan/ResNet-PyTorch)
+- [UL-VIO](https://github.com/jp4327/ulvio)
