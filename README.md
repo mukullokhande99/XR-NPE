@@ -5,7 +5,7 @@ This repository provides Python implementations of **multi-precision quantizatio
 It has three workloads:  
 - [`Gaze-LLE`](./Gaze-LLE) – Eye gaze extraction
 - [`ResNet`](./Resnet) – Image classification
-- [`EfficientNet`](./EfficientNet) – Image classification 
+- [`EfficientNet`](./.EfficientNet) – Image classification 
 - [`UL-VIO`](./UL-VIO) – Visual-Inertial Odometry 
 
 The code supports the following quantization formats:
