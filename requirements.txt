@@ -1,0 +1,10 @@
+torch
+torchvision
+numpy
+scipy
+matplotlib
+opencv-python
+Pillow
+seaborn
+requests
+pycocotools
