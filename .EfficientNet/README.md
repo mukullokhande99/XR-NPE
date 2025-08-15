@@ -9,12 +9,12 @@ conda create -n resnet-quant python=3.9
 conda activate resnet-quant
 pip install torch==2.0.0+cu118 torchvision==0.15.0+cu118 torchaudio==2.0.0+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
 ```
-
-ResNet-Quantization/
-│
-├── FP4/
-│   └── FP4_cifar.py
-│   ├── FP4_imagenet.py
-├── FP8.py
-│
-└── Posit.py
+## Structure
+EfficientNet/  
+│  
+├── FP4/  
+│   └── FP4_cifar.py  
+│   ├── FP4_imagenet.py  
+├── FP8.py  
+│  
+└── Posit.py  
