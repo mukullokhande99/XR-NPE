@@ -10,7 +10,6 @@ Create a new Conda environment with **Python 3.9**, **PyTorch 2.x**, and **CUDA 
 conda create -n resnet-quant python=3.9
 conda activate resnet-quant
 pip install torch==2.0.0+cu118 torchvision==0.15.0+cu118 torchaudio==2.0.0+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
-pip install -r requirements.txt
 ```
 ## Training Scripts
 
