@@ -38,7 +38,7 @@ making sub-INT8 precision viable for real-world VIO.
 
 ---
 
-## Repository Structure
+## Structure
 
 ### Quantization Evaluation Notebooks
 - `FP4.ipynb` — FP4 evaluation  
@@ -69,9 +69,9 @@ making sub-INT8 precision viable for real-world VIO.
         journal   = {ECCV},
         year      = {2024},
   }
-@article{yang2022efficient,
-  title={Efficient Deep Visual and Inertial Odometry with Adaptive Visual Modality Selection},
-  author={Yang, Mingyu and Chen, Yu and Kim, Hun-Seok},
-  journal={arXiv preprint arXiv:2205.06187},
-  year={2022}
+  @article{yang2022efficient,
+          title={Efficient Deep Visual and Inertial Odometry with Adaptive Visual Modality Selection},
+          author={Yang, Mingyu and Chen, Yu and Kim, Hun-Seok},
+          journal={arXiv preprint arXiv:2205.06187},
+          year={2022}
 }
