@@ -13,8 +13,10 @@ pip install torch==2.0.0+cu118 torchvision==0.15.0+cu118 torchaudio==2.0.0+cu118
 EfficientNet/  
 │  
 ├── FP4/  
-│   └── FP4_cifar.py  
-│   ├── FP4_imagenet.py  
-├── FP8.py  
+│   └── FP4_cifar.pynb   
+│   ├── FP4_imagenet.pynb   
+├── FP8.pynb   
 │  
-└── Posit.py  
+└── Posit.pynb   
+
+<img width="1107" height="362" alt="Screenshot from 2025-08-15 21-02-46" src="https://github.com/user-attachments/assets/bfcfe6ec-1593-40b4-8fbc-67cf9ef754af" />
