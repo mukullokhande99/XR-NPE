@@ -46,7 +46,7 @@ pip install -r requirements_extra.txt  #for some additional library might be use
 <table>
 <tr>
 <td align="center"><img src="images/fp32.png" width="300"/><br><b>Gaze-LLE</b></td>
-<td align="center"><img src="images/resnet18_final.jpg" width="300"/><br><b>ResNet</b></td>
+<td align="center"><img src="images/resnet18_resize.jpg" width="300"/><br><b>ResNet</b></td>
 <td align="center"><img src="images/ul_vio.png" width="300"/><br><b>UL-VIO</b></td>
 </tr>
 </table>
