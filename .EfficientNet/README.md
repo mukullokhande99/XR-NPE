@@ -19,5 +19,5 @@ EfficientNet/
 │  
 └── Posit.pynb   
 
-# FP4 Quantization training plot
+### FP4 Quantization training plot
 <img width="1107" height="362" alt="Screenshot from 2025-08-15 21-02-46" src="https://github.com/user-attachments/assets/bfcfe6ec-1593-40b4-8fbc-67cf9ef754af" />
