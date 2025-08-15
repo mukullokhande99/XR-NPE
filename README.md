@@ -21,7 +21,7 @@ This  facilitates  researchers and practitioners to explore the **trade-offs acr
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 ```text
 XR-NPE/
 │
@@ -37,7 +37,7 @@ XR-NPE/
 ```
 ---
 
-## ⚙️ Installation
+## Installation
 
 Clone the repository:
 ```bash
@@ -55,7 +55,7 @@ pip install -r requirements_extra.txt  #for some additional library might be use
 </tr>
 </table>
 
-## 🔗 References
+## References
 - [Gaze-LLE](https://github.com/fkryan/gazelle)
 - [ResNet](https://github.com/JayPatwardhan/ResNet-PyTorch)
 - [UL-VIO](https://github.com/jp4327/ulvio)
