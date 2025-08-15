@@ -23,15 +23,15 @@ UL-VIO addresses these challenges by:
 
 We systematically evaluated UL-VIO under various quantization settings on the KITTI Odometry dataset.
 
-| Precision      | Translational Error (%) | Rotational Error (°/m) | Notes |
-|----------------|------------------------|------------------------|-------|
-| FP32           | ~Baseline               | ~Baseline              | Reference |
-| FP16           | +Δ negligible           | +Δ negligible          | Half-precision safe |
-| BF16           | Minimal degradation     | Minimal degradation    | Better hardware throughput |
-| INT8           | Small drop in accuracy  | Small drop in accuracy | Efficient inference |
-| FP8            | Noticeable degradation  | Noticeable degradation | Still usable with NR-TTA |
-| FP4            | Larger degradation      | Larger degradation     | NR-TTA recovers significant performance |
-| Posit formats  | Varies                  | Varies                 | Some outperform IEEE FP under noise |
+| Precision      | Translational Error (%) | Rotational Error (%) 
+|----------------|------------------------|------------------------|
+| FP32           |   2.18%                 |   0.52%               |
+| Posit(4,0)     |   2.75%                 |   0.62%               | 
+| Posit(8,1)     |   2.50%                 |   0.58%               | 
+| Posit(16,2)    |   2.20%                 |   0.55%               | 
+| FP4(E2M1)      |   2.90%                 |   0.65%               | 
+| Posit(8,1)+FP4 |   2.36%                 |   0.56%               | 
+
 
 Key finding: NR-TTA significantly reduces performance loss from quantization combined with noise,  
 making sub-INT8 precision viable for real-world VIO.
