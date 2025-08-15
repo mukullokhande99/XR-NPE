@@ -42,6 +42,15 @@ cd XR-NPE
 pip install -r requirements.txt
 pip install -r requirements_extra.txt  #for some additional library might be used
 ```
+## Model Output Previews
+<table>
+<tr>
+<td align="center"><img src="images/fp32.png" width="200"/><br><b>Gaze-LLE</b></td>
+<td align="center"><img src="images/resnet18_final.png" width="200"/><br><b>ResNet</b></td>
+<td align="center"><img src="images/ul_vio.png" width="200"/><br><b>UL-VIO</b></td>
+</tr>
+</table>
+
 ## 🔗 References
 - [Gaze-LLE](https://github.com/fkryan/gazelle)
 - [ResNet](https://github.com/JayPatwardhan/ResNet-PyTorch)
