@@ -23,11 +23,13 @@ This  facilitates  researchers and practitioners to explore the **trade-offs acr
 
 ## 📂 Repository Structure
 ```text
-multi-precision-quantization/
+XR-NPE/
 │
 ├── Gaze-LLE/   # Eye gaze estimation quantization — BF16, FP4, FP8, Posit4, Posit8
 │
 ├── Resnet/     # ResNet image classification quantization — BF16, FP4, FP8, Posit8
+│
+├── Imagenet/     # ResNet image classification quantization — BF16, FP4, FP8, Posit8
 │
 ├── UL-VIO/     # Visual–Inertial Odometry quantization — BF16+INT8, FP4, FP8, Mixed Precision (Posit8+FP4), Posit4/8/16
 │
