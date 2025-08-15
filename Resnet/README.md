@@ -40,6 +40,13 @@ python train_cifar10_fp8.py --w-fmt e4m3 --a-fmt e4m3 --first-last-fp32
 ```
 
 ### Posit
+Setup:
+```bash
+git clone https://github.com/minhhn2910/QPyTorch.git
+cd QPyTorch && pip install -e .
+pip install ninja
+```
+
 Three variations are provided:  
 
 (a) Posit-4 :
