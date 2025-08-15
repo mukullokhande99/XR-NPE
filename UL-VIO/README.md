@@ -1,6 +1,6 @@
 # UL-VIO: Noise-Robust Visual-Inertial Odometry Across Numerical Precisions
 
-![UL-VIO Framework Overview](images/Gemini_Generated_Image_g6wb8ag6wb8ag6wb.png)  
+![UL-VIO Framework Overview](Gemini_Generated_Image_g6wb8ag6wb8ag6wb.png)  
 **Figure:** Overview of the UL-VIO framework. The system fuses visual data from the camera and inertial measurements from the IMU to estimate accurate motion trajectories, even under quantization and noise.
 
 
