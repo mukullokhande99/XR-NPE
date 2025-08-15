@@ -1,4 +1,4 @@
-# ResNet Quantization Experiments on CIFAR-10
+# ResNet Quantization Experiments 
 
 This repository contains experiments for training ResNet on CIFAR-10 with different quantization formats: **BF16**, **FP8**, **FP4**, and **Posit**.
 
