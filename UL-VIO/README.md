@@ -14,7 +14,7 @@ It uses **Noise-Robust Test-Time Adaptation (NR-TTA)** to adapt on-the-fly, maki
 - Fuses **RGB + IMU data** for reliable motion estimation.  
 - Adapts to shifts caused by **quantization and noise**.  
 - Supports a range of numerical precisions, from IEEE floating point to **Posit formats**.  
-
+![](IMU.png)
 ---
 
 ## Racetrack Path Experiments  
