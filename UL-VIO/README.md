@@ -49,7 +49,7 @@ These controlled environments highlight how **precision impacts trajectory accur
 
 #### Complex F1-Style Track  
 
-![F1 Track](F1 track.jpg)  
+![F1 Track](F1track.jpg)  
 
 - Sharper curves reveal quantization errors.  
 - **Posit(4,0)** and **FP4** deviate significantly.  
