@@ -7,75 +7,77 @@
 
 ## Introduction  
 
-**UL-VIO** is a Visual-Inertial Odometry (VIO) framework designed for **robustness under extreme quantization and sensor noise**.  
-It leverages **Noise-Robust Test-Time Adaptation (NR-TTA)** to adapt on-the-fly, enabling deployment on **low-power edge devices** without significant loss in accuracy.  
+**UL-VIO** is a Visual-Inertial Odometry (VIO) framework built for **robustness under extreme quantization and sensor noise**.  
+It uses **Noise-Robust Test-Time Adaptation (NR-TTA)** to adapt on-the-fly, making it practical for **low-power edge devices** without sacrificing much accuracy.  
 
-Key highlights:  
-- Fuses **RGB + IMU data** for motion estimation.  
-- Adapts to distribution shifts caused by **quantization + noise**.  
-- Supports **multiple precisions**, including IEEE FP and **Posit formats**.  
+**Key highlights:**  
+- Fuses **RGB + IMU data** for reliable motion estimation.  
+- Adapts to shifts caused by **quantization and noise**.  
+- Supports a range of numerical precisions, from IEEE floating point to **Posit formats**.  
 
 ---
 
-## UL-VIO Racetrack Path Experiments (Quantized Models)  
+## Racetrack Path Experiments  
 
-To analyze UL-VIO’s resilience under quantization, we tested the system on **synthetic racetrack-style paths**.  
-These controlled environments highlight how **precision impacts trajectory accuracy**.  
+To test UL-VIO’s resilience under quantization, we simulated **racetrack-style trajectories**.  
+These controlled environments let us see how precision impacts path accuracy.  
 
-### Tracks Used  
+### Tracks  
 
-1. **Horse Race Track (2D loop)** – A smooth track with sharp turns.  
-2. **Complex F1-Style Track** – A challenging circuit for F1 drivers  with sharp turns and steep roads  
+1. **Horse Race Track (2D loop)** – Smooth track with gradual turns.  
+2. **Formula 1-Style Track** – A more demanding circuit with sharp curves and steep sections.  
 
 ### Precisions Evaluated  
 
 - **Floating Point:** FP32, BF16, FP8, FP4  
 - **Posit Formats:** Posit(16,2), Posit(8,1), Posit(4,0)  
-- **Mixed Precision:** Combining higher and lower precision arithmetic  
+- **Mixed Precision:** Hybrid approach using multiple precisions  
 
-### Results  
+---
 
-- **Ground Truth (blue)** is the reference path.  
-- **High precision (FP32, BF16, Posit(16,2))** matches ground truth closely.  
-- **Low precision (FP4, Posit(4,0))** shows noticeable deviations , especially on the Formula 1  track.  
-- **Mixed Precision** balances **efficiency and accuracy**, maintaining reliable performance.  
+## Results  
 
-#### Horse Race Track (2D Path)  
+- **Ground Truth (blue)** is the reference trajectory.  
+- **High precision (FP32, BF16, Posit(16,2))** nearly overlaps with ground truth.  
+- **Low precision (FP4, Posit(4,0))** shows more deviation, especially on the Formula 1 track.  
+- **Mixed Precision** offers a good balance between efficiency and accuracy.  
+
+#### Horse Race Track  
 
 ![Horse Race Track](Horseracetrack.jpg)  
 
 - Minimal degradation across precisions.  
-- Even **FP4** and **Posit(4,0)** follow the ground truth . They rarely deviate from the ground truth   
+- Even **FP4** and **Posit(4,0)** stay close to the reference path with only rare deviations.  
 
-#### Complex Formula 1  Track  
+#### Formula 1-Style Track  
 
 ![F1 Track](F1track.jpg)  
 
-- Sharper curves reveal quantization errors.  
-- **Posit(4,0)** and **FP4** deviate significantly as seen in the figure .  
-- **FP8, Posit(8,1), and Mixed Precision** still preserve navigation accuracy.  
+- Sharper turns reveal quantization effects.  
+- **Posit(4,0)** and **FP4** drift significantly.  
+- **FP8, Posit(8,1), and Mixed Precision** remain stable and accurate.  
 
 ---
 
-## Why Quantization Matters for VIO  
+## Why Quantization Matters  
 
-Traditional VIO model relies on **FP32/FP16**, which can be expensive on embedded devices.  
-Quantization enables deployment on **resource-constrained platforms** (e.g., AR glasses, drones, mobile robots) by reducing:  
+Standard VIO models rely on **FP32/FP16**, which are too costly for embedded devices.  
+Quantization enables deployment on **resource-constrained platforms** like AR glasses, drones, and mobile robots by reducing:  
 
-- Latency  
-- Power consumption  
-- Memory footprint
+- **Latency**  
+- **Power consumption**  
+- **Memory usage**  
 
-UL-VIO addresses these challenges by:  
+UL-VIO addresses this by:  
 - Supporting **FP32, FP16, BF16, FP8, FP4, and Posit(4/8/16)**.  
-- Preserving **translational & rotational accuracy** across precisions.  
-- Using **NR-TTA** to mitigate quantization-induced noise and drift.  
+- Preserving **translational & rotational accuracy** even at low precision.  
+- Using **NR-TTA** to counter quantization-induced drift.  
 
 ---
 
-## Quantization Experiments (KITTI Odometry)  
+## KITTI Quantization Experiments  
 
-We systematically evaluated UL-VIO under various quantization settings:  
+We further validated UL-VIO on KITTI odometry with multiple quantization settings:  
 
 | Precision      | Translational Error (%) | Rotational Error (%) |
 |----------------|--------------------------|-----------------------|
@@ -86,39 +88,37 @@ We systematically evaluated UL-VIO under various quantization settings:
 | FP4 (E2M1)     | 2.90%                   | 0.65%                 | 
 | Posit(8,1)+FP4 | 2.36%                   | 0.56%                 |  
 
-**Key Finding:** NR-TTA makes **sub-INT8 precision viable** by reducing quantization + noise degradation.  
+**Key takeaway:** NR-TTA makes **sub-INT8 precision practical**, cutting error and improving stability.  
 
 ---
 
 ## Repository Structure  
 
-### Quantization Evaluation Notebooks  
+**Notebooks:**  
 - `FP4.ipynb` — FP4 evaluation  
 - `FP8.ipynb` — FP8 evaluation  
 - `BF16INT8.ipynb` — BF16 and INT8 evaluation  
 - `Posit4_8_16.ipynb` — Posit formats evaluation  
-- `Posit8+FP4.ipynb` — Mixed-precision experiment  
+- `Posit8+FP4.ipynb` — Mixed-precision evaluation  
 
-### Assets  
+**Assets:**  
 - `assets/vio_precision_error.png` — Summary plot of errors across precisions  
 
 ---
 
-##Key Takeaways
--UL‑VIO holds up surprisingly well—even with aggressive FP4 quantization—when NR‑TTA is enabled, keeping accuracy in a practical range for real deployments.
+## Key Takeaways  
 
--Building and testing with quantization in mind isn’t optional for edge use cases; it’s the only way to know how the system will behave on real devices with tight power and memory budgets.
+- **UL-VIO holds up surprisingly well—even with FP4—when paired with NR-TTA.**  
+- Designing with quantization in mind is essential for **edge deployment**.  
+- **Posit formats** can outperform IEEE FP in noisy conditions, offering a path to **efficient and robust VIO** on low-power hardware.  
 
--Posit formats can shine in noisy conditions, sometimes outperforming standard IEEE floating point, which opens the door to more efficient and robust VIO on low‑power hardware.
 ---
 
 ## Citation  
 
 ```bibtex
 @article{park2024ulvio,
-      author    = {Park, Jinho 
-                  and Chun, Se Young 
-                  and Seok, Mingoo},
+      author    = {Park, Jinho and Chun, Se Young and Seok, Mingoo},
       title     = {UL-VIO: Ultra-lightweight Visual-Inertial Odometry with Noise Robust Test-time Adaptation},
       journal   = {ECCV},
       year      = {2024},
