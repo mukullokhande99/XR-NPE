@@ -104,12 +104,12 @@ We systematically evaluated UL-VIO under various quantization settings:
 
 ---
 
-## Key Takeaways  
+##Key Takeaways
+-UL‑VIO holds up surprisingly well—even with aggressive FP4 quantization—when NR‑TTA is enabled, keeping accuracy in a practical range for real deployments.
 
-- UL-VIO maintains competitive accuracy even under **FP4 quantization** when combined with NR-TTA.  
-- **Quantization-aware evaluation** is essential for realistic edge deployment scenarios.  
-- **Posit formats** can outperform IEEE FP in noisy conditions, suggesting further efficiency opportunities in VIO systems.  
+-Building and testing with quantization in mind isn’t optional for edge use cases; it’s the only way to know how the system will behave on real devices with tight power and memory budgets.
 
+-Posit formats can shine in noisy conditions, sometimes outperforming standard IEEE floating point, which opens the door to more efficient and robust VIO on low‑power hardware.
 ---
 
 ## Citation  
