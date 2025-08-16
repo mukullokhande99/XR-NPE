@@ -108,9 +108,9 @@ We further validated UL-VIO on KITTI odometry with multiple quantization setting
 
 ## Key Takeaways  
 
-- **UL-VIO holds up surprisingly well—even with FP4—when paired with NR-TTA.**  
+- **UL-VIO holds up surprisingly well even with FP4 when paired with NR-TTA.**  
 - Designing with quantization in mind is essential for **edge deployment**.  
-- **Posit formats** can outperform IEEE FP in noisy conditions, offering a path to **efficient and robust VIO** on low-power hardware.  
+- **Posit formats** can outperform IEEE FP in noisy conditions, offering a path to **efficient and robust VIO** on low power hardware.  
 
 ---
 
