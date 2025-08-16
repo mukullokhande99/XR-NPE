@@ -24,8 +24,8 @@ These controlled environments highlight how **precision impacts trajectory accur
 
 ### Tracks Used  
 
-1. **Horse Race Track (2D loop)** – A smooth track with gradual turns.  
-2. **Complex F1-Style Track** – A challenging circuit with sharp turns and high variability.  
+1. **Horse Race Track (2D loop)** – A smooth track with sharp turns.  
+2. **Complex F1-Style Track** – A challenging circuit for F1 drivers  with sharp turns and steep roads  
 
 ### Precisions Evaluated  
 
@@ -37,7 +37,7 @@ These controlled environments highlight how **precision impacts trajectory accur
 
 - **Ground Truth (blue)** is the reference path.  
 - **High precision (FP32, BF16, Posit(16,2))** matches ground truth closely.  
-- **Low precision (FP4, Posit(4,0))** shows noticeable drifts, especially on the F1-style track.  
+- **Low precision (FP4, Posit(4,0))** shows noticeable deviations , especially on the Formula 1  track.  
 - **Mixed Precision** balances **efficiency and accuracy**, maintaining reliable performance.  
 
 #### Horse Race Track (2D Path)  
@@ -45,26 +45,26 @@ These controlled environments highlight how **precision impacts trajectory accur
 ![Horse Race Track](Horseracetrack.jpg)  
 
 - Minimal degradation across precisions.  
-- Even **FP4** and **Posit(8,1)** follow the ground truth closely.  
+- Even **FP4** and **Posit(4,0)** follow the ground truth . They rarely deviate from the ground truth   
 
-#### Complex F1-Style Track  
+#### Complex Formula 1  Track  
 
 ![F1 Track](F1track.jpg)  
 
 - Sharper curves reveal quantization errors.  
-- **Posit(4,0)** and **FP4** deviate significantly.  
+- **Posit(4,0)** and **FP4** deviate significantly as seen in the figure .  
 - **FP8, Posit(8,1), and Mixed Precision** still preserve navigation accuracy.  
 
 ---
 
 ## Why Quantization Matters for VIO  
 
-Traditional VIO relies on **FP32/FP16**, which can be expensive on embedded devices.  
+Traditional VIO model relies on **FP32/FP16**, which can be expensive on embedded devices.  
 Quantization enables deployment on **resource-constrained platforms** (e.g., AR glasses, drones, mobile robots) by reducing:  
 
 - Latency  
 - Power consumption  
-- Memory footprint  
+- Memory footprint
 
 UL-VIO addresses these challenges by:  
 - Supporting **FP32, FP16, BF16, FP8, FP4, and Posit(4/8/16)**.  
