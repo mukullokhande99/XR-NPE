@@ -1,13 +1,36 @@
 # ResNet
 
 ## Overview  
-ResNet (Residual Network) is a widely used deep convolutional neural network architecture that introduced *skip connections* to enable the training of very deep models. Its design effectively mitigates the vanishing gradient problem, making it a strong baseline for image classification tasks such as CIFAR-10 and ImageNet.  
+ResNet (Residual Network) is a widely used deep convolutional neural network architecture introduced in 2015 (ResNet-18, ResNet-34, ResNet-50, ResNet-101, etc.). Its key innovation is the **residual/skip connection**, which allows gradients to flow directly through identity mappings, making it possible to train very deep models without suffering from vanishing or exploding gradients.  
 
-This repository explores **quantization-aware training (QAT)** of ResNet on CIFAR-10 using various numerical formats, including **BF16**, **FP8**, **FP4**, and **Posit**, to study the trade-offs between accuracy, efficiency, and numerical representation.  
+ResNet has become a standard benchmark for image classification tasks such as **CIFAR-10** and **ImageNet**, and its modular design makes it highly suitable for exploring **quantization-aware training (QAT)**.  
+
+This repository focuses on **training ResNet on CIFAR-10** using different numerical formats — **BF16**, **FP8**, **FP4**, and **Posit** — to investigate trade-offs between accuracy, efficiency, and hardware suitability.  
 
 ---
+
 ![](D1.png)
 
+---
+
+## ResNet Architecture  
+
+- **Building Block**: Each ResNet block consists of two or three convolutional layers plus a **skip (identity) connection** that bypasses the block.  
+- **Skip Connections**: These shortcuts allow direct gradient flow, enabling the training of very deep networks (e.g., ResNet-152).  
+- **Variants**:  
+  - **ResNet-18 / 34** → BasicBlock with two 3×3 convolutions.  
+  - **ResNet-50 / 101 / 152** → BottleneckBlock with 1×1 → 3×3 → 1×1 convolutions.  
+- **Normalization & Activation**: Each convolution is followed by **BatchNorm + ReLU** for stability.  
+- **Global Average Pooling (GAP)**: Reduces features before the final fully connected layer for classification.  
+
+For CIFAR-10, a smaller variant (ResNet-20, ResNet-32, or ResNet-44) is often used, where the first layer is adapted to handle small 32×32 images efficiently.  
+
+**Key Advantages**:  
+- Deep yet efficient training via residual learning.  
+- Excellent benchmark for quantization experiments.  
+- Scalable to different datasets and hardware platforms.  
+
+---
 ## ResNet Quantization Experiments 
 
 
