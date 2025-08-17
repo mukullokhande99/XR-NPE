@@ -1,4 +1,20 @@
 # XR-NPE
+This repository is part of the work presented in:
+
+XR-NPE: High-Throughput Mixed-Precision SIMD Neural Processing Engine for Extended Reality Perception Workloads
+
+# Key Results:
+-42% area and 38% power reduction compared to SoTA MAC engines.
+-23% higher energy efficiency for VIO workloads.
+-4% better compute density at CMOS 28nm.
+## Features  
+- **Layer-Adaptive Mixed-Precision** quantization (FP4/Posit/Mixed Precision).  
+- **Reduced memory bandwidth** with extreme compression (up to **4.2× smaller models**).  
+- **Reconfigurable Mantissa Multiplication & Exponent Circuitry (RMMEC)** for dark-silicon reduction.  
+- **2.85× improved arithmetic intensity** compared to state-of-the-art MAC engines.  
+- **Hardware + Algorithm co-design** (FPGA/ASIC friendly).  
+
+---
 ## Multi-Precision Quantization for Vision and Sensor Fusion Models
 
 This repository provides Python implementations of **multi-precision quantization** for various computer vision and sensor fusion workloads.  
