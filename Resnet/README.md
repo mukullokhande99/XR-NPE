@@ -9,7 +9,7 @@ This repository focuses on **training ResNet on CIFAR-10** using different numer
 
 ---
 
-![ResNe Architecture ](D1.png)
+![ResNet Architecture ](D1.PNG)
 
 ---
 
