@@ -19,7 +19,8 @@ This repository focuses on **training ResNet on CIFAR-10** using different numer
 - **Skip Connections**: These shortcuts allow direct gradient flow, enabling the training of very deep networks (e.g., ResNet-152).  
 - **Variants**:  
   - **ResNet-18 / 34** → BasicBlock with two 3×3 convolutions.  
-  - **ResNet-50 / 101 / 152** → BottleneckBlock with 1×1 → 3×3 → 1×1 convolutions.  
+  - **ResNet-50 / 101 / 152** → BottleneckBlock with 1×1 → 3×3 → 1×1 convolutions.
+    ![](D2.png) 
 - **Normalization & Activation**: Each convolution is followed by **BatchNorm + ReLU** for stability.  
 - **Global Average Pooling (GAP)**: Reduces features before the final fully connected layer for classification.  
 
