@@ -89,6 +89,7 @@ We further validated UL-VIO on KITTI odometry with multiple quantization setting
 | Posit(8,1)+FP4 | 2.36%                   | 0.56%                 |  
 
 **Key takeaway:** NR-TTA makes **sub-INT8 precision practical**, cutting error and improving stability.  
+**The model size reduces to 2.42 MB further with HFP4/Posit-4/Posit-8 mixed-precision approach, compared to 13.5MB (FP32), 3.4MB (FP8/INT8), 3.6MB**
 
 ---
 
