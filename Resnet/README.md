@@ -8,9 +8,6 @@ ResNet has become a standard benchmark for image classification tasks such as **
 This repository focuses on **training ResNet on CIFAR-10** using different numerical formats — **BF16**, **FP8**, **FP4**, and **Posit** — to investigate trade-offs between accuracy, efficiency, and hardware suitability.  
 
 ---
-
-![ResNet Architecture ](D1.PNG)
-
 ---
 
 ## ResNet Architecture  
@@ -18,7 +15,8 @@ This repository focuses on **training ResNet on CIFAR-10** using different numer
 - **Building Block**: Each ResNet block consists of two or three convolutional layers plus a **skip (identity) connection** that bypasses the block.  
 - **Skip Connections**: These shortcuts allow direct gradient flow, enabling the training of very deep networks (e.g., ResNet-152).  
 - **Variants**:  
-  - **ResNet-18 / 34** → BasicBlock with two 3×3 convolutions.  
+  - **ResNet-18 / 34** → BasicBlock with two 3×3 convolutions.
+  - ![](d3.png)
   - **ResNet-50 / 101 / 152** → BottleneckBlock with 1×1 → 3×3 → 1×1 convolutions.
     ![](D2.png) 
 - **Normalization & Activation**: Each convolution is followed by **BatchNorm + ReLU** for stability.  
