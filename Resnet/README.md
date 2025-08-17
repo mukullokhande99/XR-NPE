@@ -1,4 +1,4 @@
-#ResNet
+# ResNet
 
 ## Overview  
 ResNet (Residual Network) is a widely used deep convolutional neural network architecture that introduced *skip connections* to enable the training of very deep models. Its design effectively mitigates the vanishing gradient problem, making it a strong baseline for image classification tasks such as CIFAR-10 and ImageNet.  
