@@ -8,7 +8,7 @@ XR-NPE: High-Throughput Mixed-Precision SIMD Neural Processing Engine for Extend
 <tr>
 <td align="center"><img src="images/AugmentedReality.png" width="300"/><br><b>Augmented-Reality</b></td>
 <td align="center"><img src="images/VirtualReality.png" width="300"/><br><b>Virtual-Reality</b></td>
-<td align="center"><img src="images/MixedReality.jpg" width="300"/><br><b>Mixed-Reality</b></td>
+<td align="center"><img src="images/MixedReality.png" width="300"/><br><b>Mixed-Reality</b></td>
 </tr>
 </table>
 ## Multi-Precision Quantization for Vision and Sensor Fusion Models
