@@ -11,7 +11,8 @@ XR-NPE: High-Throughput Mixed-Precision SIMD Neural Processing Engine for Extend
 <td align="center"><img src="images/MixedReality.png" width="300"/><br><b>Mixed-Reality</b></td>
 </tr>
 </table>
-## Multi-Precision Quantization for Vision and Sensor Fusion Models
+
+##  Multi-Precision Quantization for Vision and Sensor Fusion Models
 
 This repository provides Python implementations of **multi-precision quantization** for various computer vision and sensor fusion workloads.  
 It has three workloads:  
