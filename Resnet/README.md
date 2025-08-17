@@ -1,4 +1,15 @@
-# ResNet Quantization Experiments 
+#ResNet
+
+## Overview  
+ResNet (Residual Network) is a widely used deep convolutional neural network architecture that introduced *skip connections* to enable the training of very deep models. Its design effectively mitigates the vanishing gradient problem, making it a strong baseline for image classification tasks such as CIFAR-10 and ImageNet.  
+
+This repository explores **quantization-aware training (QAT)** of ResNet on CIFAR-10 using various numerical formats, including **BF16**, **FP8**, **FP4**, and **Posit**, to study the trade-offs between accuracy, efficiency, and numerical representation.  
+
+---
+![](D1.png)
+
+## ResNet Quantization Experiments 
+
 
 This repository contains experiments for training ResNet on CIFAR-10 with different quantization formats: **BF16**, **FP8**, **FP4**, and **Posit**.
 
